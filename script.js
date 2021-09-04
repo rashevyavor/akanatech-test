@@ -1,7 +1,14 @@
-let url = 'https://api.jsonbin.io/b/6133ce8f470d33259402768b';
+fetchCurrencies(callback) {
+    fetch(`https://api.jsonbin.io/b/6133ce8f470d33259402768b`)
+        .then(response => response.json())
+        .then(json => callback(null, json.currencies)
+        .catch(error => callback(error, null))
+}
 
-fetch(url)
-    .then(res => res.json())
-    .then(out =>
-        console.log('Checkout this JSON! ', out))
-    .catch(err => throw err);
+fetchCurrencies((error, currencies)=> {
+    if (error)
+        console.log(error)
+    else
+        console.log(currencies[])
+
+});
