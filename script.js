@@ -1,5 +1,7 @@
-$.getJSON('https://api.jsonbin.io/b/6133ce8f470d33259402768b', function (currencies) {
-    // JSON result in 'currencies' variable
-});
+let url = 'https://api.jsonbin.io/b/6133ce8f470d33259402768b';
 
-console.log(currencies);
+fetch(url)
+    .then(res => res.json())
+    .then(out =>
+        console.log('Checkout this JSON! ', out))
+    .catch(err => throw err);
