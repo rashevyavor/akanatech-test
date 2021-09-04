@@ -1,2 +1,2 @@
-var json = require('currencies.json'); //(with path)
+import json from 'currencies.json'; //getting the json
 console.log(json);
